@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Concept Map</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+        .map {
+            position: relative;
+            width: 90%;
+            height: 90%;
+        }
+        .node {
+            position: absolute;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background-color: #e3f2fd;
+            border: 1px solid #64b5f6;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .node:hover {
+            transform: scale(1.05);
+            background-color: #bbdefb;
+        }
+        .connector {
+            stroke: #64b5f6;
+            stroke-width: 2;
+        }
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="map">
+        <svg>
+            <line x1="50%" y1="10%" x2="50%" y2="25%" class="connector" />
+            <line x1="50%" y1="25%" x2="25%" y2="40%" class="connector" />
+            <line x1="50%" y1="25%" x2="75%" y2="40%" class="connector" />
+            <line x1="25%" y1="40%" x2="15%" y2="60%" class="connector" />
+            <line x1="25%" y1="40%" x2="35%" y2="60%" class="connector" />
+            <line x1="75%" y1="40%" x2="65%" y2="60%" class="connector" />
+            <line x1="75%" y1="40%" x2="85%" y2="60%" class="connector" />
+        </svg>
+
+        <div class="node" style="top: 5%; left: 45%;">Data Visualization & Pipeline Architecture</div>
+        
+        <div class="node" style="top: 25%; left: 20%;">Visualization: What?</div>
+        <div class="node" style="top: 25%; left: 70%;">Visualization: Why?</div>
+        
+        <div class="node" style="top: 40%; left: 10%;">Types of Data</div>
+        <div class="node" style="top: 40%; left: 30%;">Data Structures</div>
+        <div class="node" style="top: 40%; left: 60%;">Analysis Tasks</div>
+        <div class="node" style="top: 40%; left: 80%;">Analysis Levels</div>
+        
+        <div class="node" style="top: 60%; left: 5%;">Categorical</div>
+        <div class="node" style="top: 60%; left: 35%;">Tables, Trees, Networks</div>
+        <div class="node" style="top: 60%; left: 55%;">Compare, Classify</div>
+        <div class="node" style="top: 60%; left: 85%;">General to Details</div>
+    </div>
+</body>
+</html>
